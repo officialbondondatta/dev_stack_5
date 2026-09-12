@@ -10,8 +10,8 @@ const Banner = () => {
                     compare them side by side, and put together the stack that fits your
                     next project.</p>
                 <div className="mt-10 flex gap-5 lg:justify-start justify-center items-center">
-                    <button className="btn w-fit px-3 py-2 rounded-md bg-linear-to-r from-[#F97316] to-[#EC4899]">Explore Technologies</button>
-                    <button className="btn bg-white w-fit px-9 py-2 rounded-md text-black">Learn More</button>
+                    <button className="btn w-fit px-3 py-2 text-white font-normal rounded-md bg-linear-to-r from-[#F97316] to-[#EC4899]">Explore Technologies</button>
+                    <button className="btn bg-white w-fit px-9 py-2 rounded-md text-slate-600 font-normal">Learn More</button>
                 </div>
             </div>
             <div className="flex items-center justify-center">
