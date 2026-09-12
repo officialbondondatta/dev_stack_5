@@ -141,7 +141,7 @@
     },
     {
         "id": "vscode",
-        "name": "Visual Studio Code",
+        "name": "VS Code",
         "category": "Tools",
         "description": "A lightweight and customizable code editor with powerful extensions and debugging support.",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg",

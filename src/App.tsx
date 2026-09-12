@@ -6,10 +6,12 @@ function App() {
 
   return (
     <>
-      <div className="container mx-auto">
-        <Nav></Nav>
-        <Banner></Banner>
-        <Technologies></Technologies>
+      <div className="bg-[#F1F5F9] ">
+        <div className="container mx-auto">
+          <Nav></Nav>
+          <Banner></Banner>
+          <Technologies></Technologies>
+        </div>
       </div>
     </>
   )
