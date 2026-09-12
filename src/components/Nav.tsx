@@ -3,13 +3,13 @@ import Logo from '../assets/logo-text.png'
 const Nav = () => {
     return (
         <div className="flex items-center justify-between py-5 px-5 lg:px-0 sticky">
-            <div className="block lg:hidden md:hidden">
+            <div className="block lg:hidden">
                 <RxHamburgerMenu className="text-3xl" />
             </div>
             <div>
                 <img src={Logo} alt="logo" />
             </div>
-            <div className="hidden lg:block md:block">
+            <div className="hidden lg:block ">
                 <ul className="flex gap-5 text-[#475569] ">
                     <li className="text-[#DB2777] cursor-pointer text-xl font-semibold">Home</li>
                     <li className="hover:text-[#DB2777] cursor-pointer text-xl font-semibold">Technologies</li>
