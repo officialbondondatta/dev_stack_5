@@ -1,7 +1,7 @@
 import { Suspense, useState } from "react";
 import type { ITechnologyProps } from "../../types/types";
 import TechnologyCards from "./TechnologyCards";
-import StackCard from "./StackCard";
+import StackCard from "../Stack/StackCard";
 
 const technologyFetch = async (): Promise<ITechnologyProps[]> => {
     const res = await fetch('/data.json')
