@@ -11,8 +11,9 @@ export interface IStackCardProps {
 const StackCard = ({ selectedTech, setSelectedTech }: IStackCardProps) => {
     const handleRemoveAll = () => {
         setSelectedTech([])
-        toast("Removed All Technologies From Stack")
+        toast("Removed All Technologies from Your Stack")
     }
+
     return (
         <div className="card bg-base-100 shadow-sm rounded-xl lg:m-2">
             <div className="card-body">
@@ -33,7 +34,7 @@ const StackCard = ({ selectedTech, setSelectedTech }: IStackCardProps) => {
                         <div className="flex flex-col gap-5">
 
                             {selectedTech.map((tech) => (
-                                <SingleStackCard technology={tech}></SingleStackCard>
+                                <SingleStackCard selectedTech={selectedTech} setSelectedTech={setSelectedTech} technology={tech}></SingleStackCard>
                             ))}
 
                         </div>

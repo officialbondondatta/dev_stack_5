@@ -1,11 +1,20 @@
 import { RxCross1 } from "react-icons/rx";
 import type { ITechnologyProps } from "../../types/types";
+import type { Dispatch, SetStateAction } from "react";
+import { toast } from "react-toastify";
 
 export interface ISingleStackCardProps {
-    technology: ITechnologyProps
+    technology: ITechnologyProps,
+    selectedTech: ITechnologyProps[],
+    setSelectedTech: Dispatch<SetStateAction<ITechnologyProps[]>>
 }
 
-const SingleStackCard = ({ technology }: ISingleStackCardProps) => {
+const SingleStackCard = ({ technology, selectedTech, setSelectedTech }: ISingleStackCardProps) => {
+    const handleSingleRemove = (tech: ITechnologyProps) => {
+        const newTechStack = selectedTech.filter((t) => tech.id !== t.id)
+        setSelectedTech(newTechStack)
+        toast(`${tech.name} Removed from Your Stack`)
+    }
     return (
         <div className="flex items-center justify-between border border-slate-300 py-2 px-3 rounded-md">
             <div className="flex items-center justify-center gap-2">
@@ -16,7 +25,7 @@ const SingleStackCard = ({ technology }: ISingleStackCardProps) => {
                 </div>
             </div>
             <div>
-                <RxCross1 className="text-xl font-bold" />
+                <RxCross1 onClick={() => handleSingleRemove(technology)} className="text-xl font-bold cursor-pointer" />
             </div>
 
         </div>
