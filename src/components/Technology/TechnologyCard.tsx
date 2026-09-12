@@ -1,7 +1,14 @@
 import { FaStar } from "react-icons/fa";
 import type { ITechnologyProps } from "../../types/types";
+import type { Dispatch, SetStateAction } from "react";
 
-const TechnologyCard = ({ singleTechnology }: { singleTechnology: ITechnologyProps }) => {
+export interface ITechnologyCardProps {
+    singleTechnology: ITechnologyProps,
+    selectedTech: ITechnologyProps[],
+    setSelectedTech: Dispatch<SetStateAction<ITechnologyProps[]>>
+}
+
+const TechnologyCard = ({ singleTechnology }: ITechnologyCardProps) => {
     console.log(singleTechnology)
     return (
         <div className="card bg-base-100 shadow-sm">
