@@ -1,5 +1,6 @@
 import Banner from "./components/Banner";
 import Nav from "./components/Nav";
+import Technologies from "./components/Technology/Technologies";
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
       <div className="container mx-auto">
         <Nav></Nav>
         <Banner></Banner>
+        <Technologies></Technologies>
       </div>
     </>
   )

@@ -1,0 +1,37 @@
+import { Suspense, useState } from "react";
+import type { ITechnologyProps } from "../../types/types";
+import TechnologyCards from "./TechnologyCards";
+import StackCard from "./StackCard";
+
+const technologyFetch = async (): Promise<ITechnologyProps[]> => {
+    const res = await fetch('/data.json')
+    const data = res.json()
+    return data
+}
+
+const Technologies = () => {
+    const [technologyPromise] = useState(() => technologyFetch())
+    return (
+        <section>
+            <div className="space-y-2 mb-10">
+                <h1 className="font-semibold text-4xl">Explore the <span className="bg-linear-to-r from-[#EC4899] to-[#8B5CF6] bg-clip-text text-transparent">Technologies</span></h1>
+                <p>Pick one technology per category to build your ideal stack.</p>
+            </div>
+            <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-10">
+                <div className="lg:col-span-3">
+                    <Suspense fallback={<p>Loading...</p>}>
+                        <TechnologyCards technologyPromise={technologyPromise}></TechnologyCards>
+                    </Suspense>
+                </div>
+                <div>
+                    <Suspense fallback={<p>Loading...</p>}>
+                        <StackCard></StackCard>
+                    </Suspense>
+                </div>
+            </div>
+
+        </section>
+    );
+};
+
+export default Technologies;
