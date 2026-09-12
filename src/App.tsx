@@ -1,8 +1,12 @@
+import Nav from "./components/Nav";
+
 function App() {
 
   return (
     <>
-      <h1 className="text-orange-500">Hello</h1>
+      <div className="container mx-auto">
+        <Nav></Nav>
+      </div>
     </>
   )
 }
