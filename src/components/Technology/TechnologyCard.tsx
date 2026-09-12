@@ -1,6 +1,8 @@
 import { FaStar } from "react-icons/fa";
 import type { ITechnologyProps } from "../../types/types";
-import type { Dispatch, SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
+import { toast } from "react-toastify";
+import { MdDone } from "react-icons/md";
 
 export interface ITechnologyCardProps {
     singleTechnology: ITechnologyProps,
@@ -8,10 +10,14 @@ export interface ITechnologyCardProps {
     setSelectedTech: Dispatch<SetStateAction<ITechnologyProps[]>>
 }
 
-const TechnologyCard = ({ singleTechnology }: ITechnologyCardProps) => {
-    console.log(singleTechnology)
+const TechnologyCard = ({ singleTechnology, selectedTech, setSelectedTech }: ITechnologyCardProps) => {
+    const handleAddToStack = (tech: ITechnologyProps) => {
+        setSelectedTech([...selectedTech, tech])
+        toast("Added to stack")
+    }
+    const isAdded = selectedTech.some((tech) => tech.id === singleTechnology.id)
     return (
-        <div className="card bg-base-100 shadow-sm">
+        <div className={`card bg-base-100 shadow-sm ${isAdded ? "border-pink-600 border" : ""} hover:scale-105`}>
             <div className=" relative card-body">
                 <div className=" absolute top-4 right-5 flex items-center justify-end">
                     <span className="badge bg-purple-200 text-xs font-semibold py-2 lg:py-4 rounded-full text-purple-800">{singleTechnology.badge}</span>
@@ -35,8 +41,8 @@ const TechnologyCard = ({ singleTechnology }: ITechnologyCardProps) => {
                         </h2>
                     </div>
                 </div>
-                <button className="btn bg-slate-900 text-white font-normal rounded-md lg:mt-5 mt-2">
-                    Add to Stack
+                <button onClick={() => handleAddToStack(singleTechnology)} disabled={isAdded} className="btn bg-slate-900 disabled:cursor-not-allowed! hover:bg-slate-700 disabled:bg-pink-100  disabled:text-pink-600 disabled:font-semibold text-white font-normal rounded-md lg:mt-5 mt-2">
+                    {isAdded ? (<> <MdDone className="text-xl" /> Added to Stack </>) : ("Add to Stack")}
                 </button>
             </div>
         </div>
