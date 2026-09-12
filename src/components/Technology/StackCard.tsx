@@ -14,7 +14,7 @@ const StackCard = ({ selectedTech, setSelectedTech }: IStackCardProps) => {
         toast("Removed All Technologies From Stack")
     }
     return (
-        <div className="card bg-base-100 shadow-sm rounded-xl lg:m-5">
+        <div className="card bg-base-100 shadow-sm rounded-xl lg:m-2">
             <div className="card-body">
                 <div>
                     <h2 className="card-title">
