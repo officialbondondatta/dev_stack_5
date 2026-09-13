@@ -1,8 +1,8 @@
 import BannerImage from '../assets/banner-stack.png'
 const Banner = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center text-center lg:text-left justify-between overflow-hidden">
-            <div className="space-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center text-center lg:text-left justify-between overflow-hidden mt-10">
+            <div className="space-y-5 flex flex-col items-center lg:items-start py-2">
                 <h1 className="lg:text-5xl text-3xl font-bold text-black">
                     Build Your Ideal <br /> <span className="bg-linear-to-r from-[#FF5722] via-[#D81B7E] to-[#7C3AED] bg-clip-text text-transparent"> Development Stack</span>
                 </h1>
