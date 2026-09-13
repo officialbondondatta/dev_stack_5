@@ -18,7 +18,7 @@ const Technologies = () => {
                 <h1 className="font-semibold lg:text-4xl text-2xl">Explore the <span className="brand-gradient bg-clip-text text-transparent">Technologies</span></h1>
                 <p className="lg:text-xl text-lg">Pick one technology per category to build your ideal stack.</p>
             </div>
-            <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-2 p-2 lg:p-0">
+            <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-2 p-2">
                 <div className="lg:col-span-3">
                     <Suspense fallback={<span className="loading text-[#EC4899] loading-spinner text-4xl loading-xl"></span>}>
                         <TechnologyCards selectedTech={selectedTech} setSelectedTech={setSelectedTech} technologyPromise={technologyPromise}></TechnologyCards>

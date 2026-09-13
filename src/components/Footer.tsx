@@ -50,11 +50,11 @@ const Footer = () => {
                 <div className="flex justify-between items-center lg:px-0 px-5 mb-5 lg:mb-10">
                     <div className="flex items-center gap-2 text-slate-300">
                         <FaRegCopyright />
-                        <h2 className="text-xs lg:text-xl">
+                        <h2 className="text-xs lg:text-sm">
                             2026 DevStack. All rights reserved</h2>
                     </div>
                     <div>
-                        <ul className="flex gap-2 text-slate-300 text-xs lg:text-lg">
+                        <ul className="flex gap-2 text-slate-300 text-xs lg:text-sm">
                             <li><a href="#">Privacy</a></li>
                             <li><a href="#">Terms</a></li>
                         </ul>
