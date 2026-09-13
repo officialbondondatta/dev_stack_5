@@ -50,65 +50,59 @@ JSON for storing the technology information
 
 Vite for development and production builds
 
-Key Features
+# Key Features
 
-Explore technologies : View technology cards with an icon, description, category, difficulty, badge, and rating.
+### Explore technologies : View technology cards with an icon, description, category, difficulty, badge, and rating.
 
-Build a custom stack : Add technologies, prevent duplicate selections, remove individual items, or clear the full stack.
+### Build a custom stack : Add technologies, prevent duplicate selections, remove individual items, or clear the full stack.
 
-Responsive user experience : Enjoy a mobile-friendly layout, loading and empty states, selected card feedback, and toast notifications.
+### Responsive user experience : Enjoy a mobile-friendly layout, loading and empty states, selected card feedback, and toast notifications.
 
-Run Locally
+# Run Locally
 
-# Clone the repository
+### Clone the repository
 git clone https://github.com/officialbondondatta/dev_stack_5.git
 
-# Enter the project folder
+### Enter the project folder
 cd dev_stack_5
 
-# Install dependencies
+### Install dependencies
 npm install
 
-# Start the development server
+### Start the development server
 npm run dev
 
-React Questions and Answers
+# React Questions and Answers
 
-1. What is JSX, and why is it used in React?
+### 1. What is JSX, and why is it used in React?
 
 jsx is a syntax that lets us write html like code inside javaScript or typeScript. React uses it to make user interface code easier to read and build.
 
-2. What is the difference between props and state?
+### 2. What is the difference between props and state?
 
 props  are values a parent component passes to a child. State is data managed inside a component that can change and cause the ui to update.
 
-3. What does the useState hook do, and where did you use it in this project?
+### 3. What does the useState hook do, and where did you use it in this project?
 
 useState stores changing data in a component. I used it in Technologies.tsx to store the selected technologies and keep the technology fetching promise stable.
 
-4. What does the useEffect hook do, and why did you need it to load the JSON data?
+### 4. What does the useEffect hook do, and why did you need it to load the JSON data?
 
 useEffect runs side effects, such as fetching data, after a component renders. In this project I did not use useEffect, I loaded data.json with fetch(), use() hook, and Suspense instead.
 
-5. Why does every item in a .map() list need a unique key prop?
+### 5. Why does every item in a .map() list need a unique key prop?
 
 A unique key helps React identify which item was added, removed, or changed. This lets React update lists correctly and efficiently, such as key={technology.id} in the technology-card list.
 
-6. What is conditional rendering? Show one place you used it.
+### 6. What is conditional rendering? Show one place you used it.
 
-Conditional rendering means showing different UI based on a condition. In StackCard.tsx, I show an empty message when no technology has been selected:
+Conditional rendering means showing different UI based on a condition. In StackCard.tsx, I check selectedTech.length === 0. If it is true, the page shows “Your stack is empty.” Otherwise, it displays the selected technology cards.
 
-{selectedTech.length === 0 ? (
-  <h2>Your stack is empty.</h2>
-) : (
-  <div>{/* Selected technology cards */}</div>
-)}
-
-7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
 A parent passes data to a child through props. A child sends an action or value back by calling a function passed by the parent; here, child components call setSelectedTech to update the stack stored in Technologies.tsx.
 
 <div align="center">
   <p>Built with React, TypeScript, and curiosity.</p>
-  <p>© 2026 DevStack</p>
+  <p>© 2026 DevStack | Bondon Datta</p>
 </div>
