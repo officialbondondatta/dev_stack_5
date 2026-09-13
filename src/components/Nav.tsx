@@ -20,8 +20,8 @@ const Nav = () => {
                     </ul>
                 </div>
                 <div className="flex gap-5 lg:text-xl text-sm">
-                    <button className="btn-primary">Sign In</button>
-                    <button className="btn-primary brand-gradient text-white rounded-full lg:py-2 py-1 px-2 lg:px-5">Sign Up</button>
+                    <button className="btn-primary cursor-pointer">Sign In</button>
+                    <button className="btn-primary brand-gradient cursor-pointer text-white rounded-full lg:py-2 py-1 px-2 lg:px-5">Sign Up</button>
                 </div>
             </div>
         </div>
