@@ -1,4 +1,5 @@
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import Nav from "./components/Nav";
 import Technologies from "./components/Technology/Technologies";
 
@@ -12,6 +13,7 @@ function App() {
           <Banner></Banner>
           <Technologies></Technologies>
         </div>
+        <Footer></Footer>
       </div>
     </>
   )
