@@ -20,7 +20,7 @@ const Technologies = () => {
             </div>
             <div className="grid lg:grid-cols-4 grid-cols-1 lg:gap-2 p-2 lg:p-0">
                 <div className="lg:col-span-3">
-                    <Suspense fallback={<p>Loading...</p>}>
+                    <Suspense fallback={<span className="loading text-[#EC4899] loading-spinner text-4xl loading-xl"></span>}>
                         <TechnologyCards selectedTech={selectedTech} setSelectedTech={setSelectedTech} technologyPromise={technologyPromise}></TechnologyCards>
                     </Suspense>
                 </div>
