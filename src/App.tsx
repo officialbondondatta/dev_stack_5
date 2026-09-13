@@ -6,9 +6,9 @@ function App() {
 
   return (
     <>
-      <div className="bg-[#F1F5F9] overflow-hidden">
+      <div className="bg-[#F1F5F9]">
+        <Nav></Nav>
         <div className="container mx-auto">
-          <Nav></Nav>
           <Banner></Banner>
           <Technologies></Technologies>
         </div>
