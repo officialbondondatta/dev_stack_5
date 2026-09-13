@@ -34,7 +34,7 @@ const StackCard = ({ selectedTech, setSelectedTech }: IStackCardProps) => {
                         <div className="flex flex-col gap-5">
 
                             {selectedTech.map((tech) => (
-                                <SingleStackCard selectedTech={selectedTech} setSelectedTech={setSelectedTech} technology={tech}></SingleStackCard>
+                                <SingleStackCard key={tech.id} selectedTech={selectedTech} setSelectedTech={setSelectedTech} technology={tech}></SingleStackCard>
                             ))}
 
                         </div>
