@@ -12,16 +12,16 @@ const Nav = () => {
                 </div>
                 <div className="hidden lg:block ">
                     <ul className="flex gap-5 text-[#475569] ">
-                        <li className="text-[#DB2777] cursor-pointer text-xl font-semibold">Home</li>
-                        <li className="hover:text-[#DB2777] cursor-pointer text-xl font-semibold">Technologies</li>
-                        <li className="hover:text-[#DB2777] cursor-pointer text-xl font-semibold">Projects</li>
-                        <li className="hover:text-[#DB2777] cursor-pointer text-xl font-semibold">About</li>
-                        <li className="hover:text-[#DB2777] cursor-pointer text-xl font-semibold">Contact</li>
+                        <li className="brand-gradient bg-clip-text text-transparent cursor-pointer text-xl font-semibold">Home</li>
+                        <li className="hover:brand-gradient hover:bg-clip-text hover:text-transparent cursor-pointer text-xl font-semibold">Technologies</li>
+                        <li className="hover:brand-gradient hover:bg-clip-text hover:text-transparent cursor-pointer text-xl font-semibold">Projects</li>
+                        <li className="hover:brand-gradient hover:bg-clip-text hover:text-transparent cursor-pointer text-xl font-semibold">About</li>
+                        <li className="hover:brand-gradient hover:bg-clip-text hover:text-transparent cursor-pointer text-xl font-semibold">Contact</li>
                     </ul>
                 </div>
                 <div className="flex gap-5 lg:text-xl text-sm">
                     <button className="btn-primary">Sign In</button>
-                    <button className="btn-primary bg-[#D91B7E] text-white rounded-full lg:py-2 py-1 px-2 lg:px-5">Sign Up</button>
+                    <button className="btn-primary brand-gradient text-white rounded-full lg:py-2 py-1 px-2 lg:px-5">Sign Up</button>
                 </div>
             </div>
         </div>
